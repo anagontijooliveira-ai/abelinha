@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Lindo Mundo das Abelhinhas! 🐝</title>
+    <style>
+        :root {
+            --vermelho-morango: #FF4D6D; /* Um vermelho bem fofo e alegre */
+            --vermelho-goma: #FF758F; /* Tom pastel para detalhes */
+            --amarelo-sol: #FFC300; /* Amarelo quentinho para mel e abelhas */
+            --fundo-nuvem: #FFF5F6; /* Fundo rosinha bem claro e aconchegante */
+            --texto-suave: #4A3B32; /* Um marrom escuro em vez de preto, fica mais fofo! */
+            --branco: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Fonte arredondada e super amigável */
+            font-family: 'Quicksand', 'Nunito', 'Comic Sans MS', sans-serif;
+        }
+
+        body {
+            background-color: var(--fundo-nuvem);
+            color: var(--texto-suave);
+            line-height: 1.6;
+        }
+
+        /* Topo Mágico e Fofinho */
+        header {
+            background: linear-gradient(135deg, var(--vermelho-morango), var(--vermelho-goma));
+            color: white;
+            padding: 90px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 8px dashed var(--amarelo-sol);
+        }
+
+        /* Abelhinhas e Flores Flutuantes */
+        .fofura {
+            position: absolute;
+            font-size: 3.5rem;
+            user-select: none;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));
+        }
+        .b1 { top: 15%; left: 10%; animation: vooFofo 4s infinite alternate ease-in-out; }
+        .b2 { bottom: 20%; right: 10%; animation: vooFofo 5s infinite alternate-reverse ease-in-out; }
+        .b3 { top: 35%; left: 45%; font-size: 2rem; opacity: 0.7; }
+
+        @keyframes vooFofo {
+            0% { transform: translateY(0) scale(1) rotate(-5deg); }
+            100% { transform: translateY(-20px) scale(1.05) rotate(5deg); }
+        }
+
+        header h1 {
+            font-size: 3.2rem;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 0px rgba(0,0,0,0.1);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            max-width: 650px;
+            margin: 0 auto;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: -30px auto 60px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Balões de Curiosidades */
+        .baloes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .balao-fofo {
+            background: var(--branco);
+            padding: 30px;
+            border-radius: 30px; /* Bordas super arredondadas */
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(255, 77, 109, 0.08);
+            border: 3px solid #FFE3E7;
+            transition: transform 0.3s;
+        }
+
+        .balao-fofo:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: var(--vermelho-goma);
+        }
+
+        .balao-fofo .emoji {
+            font-size: 3.5rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .balao-fofo h3 {
+            color: var(--vermelho-morango);
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        /* Cartinha de Explicação */
+        .cartinha-conteudo {
+            background: var(--branco);
+            padding: 45px;
+            border-radius: 35px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            margin-bottom: 50px;
+            border: 4px dashed var(--vermelho-goma);
+        }
+
+        .cartinha-conteudo h2 {
+            color: var(--vermelho-morango);
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        /* Duas colunas fofas */
+        .split-fofo {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .split-fofo { grid-template-columns: 1fr; text-align: center; }
+            header h1 { font-size: 2.3rem; }
+        }
+
+        /* Mascote Central do Site */
+        .mascote-box {
+            background: radial-gradient(circle, #FFF0F2 0%, #FFE3E7 100%);
+            border-radius: 50%;
+            width: 260px;
+            height: 260px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            border: 6px solid var(--branco);
+            box-shadow: 0 8px 20px rgba(255, 77, 109, 0.15);
+        }
+
+        .mascote-animado {
+            font-size: 6rem;
+            animation: dancinha 3s infinite ease-in-out;
+            display: inline-block;
+        }
+
+        @keyframes dancinha {
+            0%, 100% { transform: rotate(-10deg) scale(1); }
+            50% { transform: rotate(10deg) scale(1.1); }
+        }
+
+        /* Lista de Amigos da Natureza */
+        .lista-fofa {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .lista-fofa li {
+            background: #FFF9FA;
+            margin-bottom: 12px;
+            padding: 15px 20px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-weight: 500;
+        }
+
+        /* Rodapé de Algodão Doce */
+        footer {
+            background: var(--vermelho-morango);
+            color: white;
+            text-align: center;
+            padding: 45px 20px;
+            margin-top: 60px;
+            border-top: 8px dashed var(--amarelo-sol);
+        }
+
+        footer p { font-weight: bold; font-size: 1.1rem; }
+        footer span { font-size: 0.9rem; display: block; margin-top: 10px; opacity: 0.9; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="fofura b1">🐝💕</div>
+        <div class="fofura b2">🌸✨</div>
+        <div class="fofura b3">🍓</div>
+        <h1>As Abelhinhas e as Flores</h1>
+        <p>A historinha mais linda da natureza: como pequenos voos criam um mundo cheinho de cores e frutas gostosas!</p>
+    </header>
+
+    <div class="container">
+        
+        <section class="baloes-grid">
+            <div class="balao-fofo">
+                <span class="emoji">🍉</span>
+                <h3>Super Lanchinho</h3>
+                <p>Sem as abelhinhas, não teríamos melancias docinhas, morangos vermelhos e nem chocolate!</p>
+            </div>
+            <div class="balao-fofo">
+                <span class="emoji">👑</span>
+                <h3>Super-Heroínas</h3>
+                <p>Mais de 75% de todas as plantinhas do mundo precisam que uma abelha dê um abraço nelas para nascerem frutinhas!</p>
+            </div>
+            <div class="balao-fofo">
+                <span class="emoji">🎨</span>
+                <h3>Olhinhos Mágicos</h3>
+                <p>Elas enxergam as flores com cores brilhantes que nós humanos nem conseguimos ver!</p>
+            </div>
+        </section>
+
+        <section class="cartinha-conteudo">
+            <h2>O que é a Polinização? 💕</h2>
+            
+            <div class="split-fofo">
+                <div class="historinha">
+                    <p>Imagine que as flores querem mandar cartinhas de amor umas para as outras, mas não conseguem andar. É aí que entra a <strong>Abelhinha Mensageira</strong>!</p>
+                    <br>
+                    <p>Quando ela pousa em uma flor vermelha para beber o docinho néctar, um pozinho mágico chamado <em>pólen</em> gruda no corpinho fofinho e peludo dela.</p>
+                    <br>
+                    <p>Ao voar para a próxima flor, esse pozinho cai e... <strong>Plim! ✨</strong> A mágica acontece! A florzinha fica grávida e se transforma em uma fruta deliciosa ou em uma nova sementinha.</p>
+                    
+                    <ul class="lista-fofa">
+                        <li><span>🌻</span> Elas visitam até mil flores em um único passeio!</li>
+                        <li><span>🕺</span> Elas conversam com as amigas fazendo uma dancinha engraçada!</li>
+                    </ul>
+                </div>
+
+                <div class="mascote-box">
+                    <span class="mascote-animado">🐝</span>
+                    <h4 style="color: var(--vermelho-morango); margin-top: 10px;">Abelhinha Feliz</h4>
+                    <p style="font-size: 0.85rem; text-align: center; padding: 0 10px;">"Obrigada por cuidar do meu jardim!"</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>Feito com amor, flores vermelhas e muito mel! 🍯❤️</p>
+        <span>Lembre-se: se você ver uma abelhinha, não precisa ter medo. Ela só quer cuidar das plantinhas!</span>
+    </footer>
+
+</body>
+</html>
